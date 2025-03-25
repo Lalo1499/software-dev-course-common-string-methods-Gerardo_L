@@ -69,23 +69,41 @@ Complete the following tasks and assign the results to the specified variables. 
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
 // 1. Searching
-let hasJavaScript; // Your code here
-let codingPosition; // Your code here
-let startsWithWelcome; // Your code here
-let endsWithToday; // Your code here
+let hasJavaScript = inputString.includes("JavaScript");
+console.log("Has JavaScript:", hasJavaScript);
+
+let codingPosition = inputString.indexOf("Coding");
+console.log("Position of 'Coding':", codingPosition);
+
+let startsWithWelcome = inputString.trim().startsWith("Welcome");
+console.log("Starts with 'Welcome':", startsWithWelcome);
+
+let endsWithToday = inputString.trim().endsWith("today.");
+console.log("Ends with 'today.':", endsWithToday);
 
 // 2. Transforming
-let lowercaseString; // Your code here
-let uppercaseString; // Your code here
-let trimmedString; // Your code here
-let replacedString; // Your code here
+let lowercaseString = inputString.toLowerCase();
+console.log("Lowercase String:", lowercaseString);
+
+let uppercaseString = inputString.toUpperCase();
+console.log("Uppercase String:", uppercaseString);
+
+let trimmedString = inputString.trim();
+console.log("Trimmed String:", trimmedString);
+
+let replacedString = inputString.replace("JavaScript", "coding");
+console.log("Replaced String:", replacedString);
 
 // 3. Breaking Apart
-let wordsArray; // Your code here
+let wordsArray = inputString.trim().split(" ");
+console.log("Words Array:", wordsArray);
 
 // 4. Retrieving
-let firstCharacter; // Your code here
-let extractedBootcamp; // Your code here
+let firstCharacter = trimmedString.charAt(0);
+console.log("First Character:", firstCharacter);
+
+let extractedBootcamp = inputString.slice(inputString.indexOf("Bootcamp"), inputString.indexOf("Bootcamp") + 8);
+console.log("Extracted 'Bootcamp':", extractedBootcamp);
 
 // Log all results
 console.log({
